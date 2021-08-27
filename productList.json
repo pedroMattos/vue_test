@@ -1,0 +1,12 @@
+[
+   {
+      "image":"https://picsum.photos/200/300",
+      "title":"Product 1",
+      "price":"$250"
+   },
+   {
+      "image":"https://picsum.photos/200/400",
+      "title":"Product 2",
+      "price":"221"
+   }
+]
