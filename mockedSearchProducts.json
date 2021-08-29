@@ -1,0 +1,12 @@
+{
+  "products": [
+    {"img": "https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg",
+      "price": 500, "specialPrice": null, "title": "Black Suit", "_id": 0, "addOnCart": false},
+    {"img": "https://cdn.pixabay.com/photo/2015/02/14/02/20/wedding-636021_960_720.jpg",
+        "price": 500, "specialPrice": 450, "title": "White Suit", "_id": 1, "addOnCart": false},
+    {"img": "https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg",
+      "price": 500, "specialPrice": null, "title": "Black Suit", "_id": 2, "addOnCart": false},
+    {"img": "https://cdn.pixabay.com/photo/2015/02/14/02/20/wedding-636021_960_720.jpg",
+        "price": 500, "specialPrice": 450, "title": "White Suit", "_id": 3, "addOnCart": false}
+  ]
+}
