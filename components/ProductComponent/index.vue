@@ -7,7 +7,7 @@
   :special-price="_product.specialPrice ? `$ ${_product.specialPrice}` : null"
   :title="_product.title"
   :show-add-to-cart-button="true"
-  @click:add-to-cart="teste(_product)"
+  @click:add-to-cart="cart(_product)"
   :is-added-to-cart="_product.addOnCart"
   :wishlist-icon="null"
   />
@@ -29,18 +29,29 @@ export default {
     }
   },
   methods: {
-    teste(item) {
+    /**
+     * cart control
+     */
+    cart(item) {
       this._product.addOnCart = !this._product.addOnCart
       this.addOrRemoveItens({ itemToAddOrRemove: item })
     },
+    /**
+     * this function will save itens on cart
+     */
     async saveCart (itemAdded) {
       // checar quantidade
       await this.$localForage.setItem('cart', itemAdded).then(() => {
         console.log('success')
+        this.$root.$emit('updateCart', itemAdded)
       }).catch((err) => {
         throw new Error(err)
       })
     },
+    /**
+     * @param {Object} itemToAddOrRemove - Obrigatory param to get addOnCArt value
+     * this funciont will switch according to current value 'addOnCart'
+     */
     addOrRemoveItens ({ itemToAddOrRemove }) {
       switch (itemToAddOrRemove.addOnCart) {
         case false:
@@ -53,6 +64,10 @@ export default {
           break;
       }
     },
+    /**
+     * @param {Object} itemToAdd - Obrigatory param to make 'push' on products array
+     * this function will receive item to add on cart
+     */
     async addItemOnCart({ itemToAdd }) {
       let itensFromDB = await this.$localForage.getItem('cart').then((itens) => itens)
       if (Array.isArray(itensFromDB))
@@ -66,13 +81,20 @@ export default {
         return el != null;
       }))
     },
+    /**
+     * this function will receive item to remove from cart
+     * @param {Object} itemToremove - Obrigatory param to make a query
+     */
     async removeItemFromCart({ itemToremove }) {
       let itensFromDB = await this.$localForage.getItem('cart').then((itens) => itens)
-      console.log(itemToremove, 'item para remover', itensFromDB, 'itens do banco')
       this.saveCart(itensFromDB.filter((el) => {
         if (itemToremove._id !== el._id) return el
       }))
     },
+    /**
+     * this function will check if exist any item on cart, to set up active status on
+     * cart icon
+     */
     async checkIsOnCart() {
       let itensFromDB = await this.$localForage.getItem('cart').then((itens) => itens)
       this._product.addOnCart = itensFromDB.find((el) => el._id === this._product._id) !== undefined
@@ -81,6 +103,11 @@ export default {
   },
   mounted() {
     this.checkIsOnCart()
+    // event listener to remove item directly from cart
+    this.$root.$on('removeItemFromCart', item => {
+      this.removeItemFromCart({ itemToremove: item })
+      this.checkIsOnCart()
+    })
   },
 }
 </script>
