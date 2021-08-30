@@ -1,0 +1,12 @@
+{
+  "products": [
+    {"img": "https://cdn.pixabay.com/photo/2015/03/26/09/41/tie-690084_960_720.jpg",
+      "price": 500, "specialPrice": null, "title": "Black Suit", "_id": 0, "addOnCart": false},
+    {"img": "https://cdn.pixabay.com/photo/2015/02/14/02/20/wedding-636021_960_720.jpg",
+        "price": 500, "specialPrice": 450, "title": "White Suit", "_id": 1, "addOnCart": false},
+    {"img": "https://cdn.pixabay.com/photo/2015/09/02/12/57/woman-918784_960_720.jpg",
+      "price": 500, "specialPrice": null, "title": "Dress Marine", "_id": 2, "addOnCart": false},
+    {"img": "https://cdn.pixabay.com/photo/2020/05/06/16/46/fashion-5138277_960_720.jpg",
+        "price": 500, "specialPrice": 450, "title": "Fashion clothe", "_id": 3, "addOnCart": false}
+  ]
+}
