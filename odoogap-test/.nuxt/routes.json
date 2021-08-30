@@ -1,0 +1,14 @@
+[
+  {
+    "name": "customProduct-all",
+    "path": "/customProduct/*",
+    "component": "C:\\\\Users\\\\Dell XPS 8700\\\\Desktop\\\\vue_test\\\\odoogap-test\\\\pages\\\\customProduct\\\\_.vue",
+    "chunkName": "pages/customProduct/_"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\Dell XPS 8700\\\\Desktop\\\\vue_test\\\\odoogap-test\\\\pages\\\\index.vue",
+    "chunkName": "pages/index"
+  }
+]
