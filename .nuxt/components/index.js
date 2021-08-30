@@ -1,6 +1,5 @@
-export { default as NuxtLogo } from '../..\\components\\NuxtLogo.vue'
-export { default as Tutorial } from '../..\\components\\Tutorial.vue'
 export { default as MyCart } from '../..\\components\\myCart\\index.vue'
+export { default as NavBar } from '../..\\components\\NavBar\\index.vue'
 export { default as ProductComponent } from '../..\\components\\ProductComponent\\index.vue'
 
 // nuxt/nuxt.js#8607

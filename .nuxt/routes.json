@@ -3,14 +3,12 @@
     "name": "customProduct-all",
     "path": "/customProduct/*",
     "component": "C:\\\\Users\\\\Dell XPS 8700\\\\Desktop\\\\vue_test\\\\odoogap-test\\\\pages\\\\customProduct\\\\_.vue",
-    "chunkName": "pages/customProduct/_",
-    "_name": "_238e69c0"
+    "chunkName": "pages/customProduct/_"
   },
   {
     "name": "index",
     "path": "/",
     "component": "C:\\\\Users\\\\Dell XPS 8700\\\\Desktop\\\\vue_test\\\\odoogap-test\\\\pages\\\\index.vue",
-    "chunkName": "pages/index",
-    "_name": "_3db515fa"
+    "chunkName": "pages/index"
   }
 ]
