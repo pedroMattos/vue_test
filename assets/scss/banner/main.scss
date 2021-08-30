@@ -1,0 +1,18 @@
+.banner {
+  position: relative;
+  img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    filter: brightness(50%)
+  }
+  .infos {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 15px;
+    h1 {
+      color: white;
+    }
+  }
+}
